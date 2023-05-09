@@ -1,0 +1,435 @@
+/* APP STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100%;
+  background-color: #f1f1f1;
+}
+
+.App {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 25vw auto;
+  grid-auto-rows: minmax(100vh, auto);
+  background-color: #f1f1f1;
+}
+
+nav {
+  width: 25vw;
+  min-height: 100%;
+  background-color: #0000bf;
+  color: #ffffff;
+  position: relative;
+}
+
+nav h1 {
+  font-size: 1.4rem;
+  margin: 30px;
+  text-align: left;
+}
+
+nav ul {
+  list-style: none;
+  text-align: left;
+  line-height: 1.5;
+  padding-bottom: 2rem; /* For footer */
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 30px;
+  font-size: 1.25rem;
+}
+
+nav ul li a:hover,
+a:active {
+  background-color: black;
+}
+
+h3 {
+  font-size: 1.25rem;
+  padding-bottom: 10px;
+}
+
+video {
+  margin: 10px 0;
+  border: solid 2px #f1f1f1;
+}
+
+.aalto-element {
+  background-repeat: repeat-y;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("aalto.svg");
+  position: fixed;
+  left: 23vw;
+}
+
+.content {
+  z-index: 1;
+}
+
+.Link {
+  color: #ffffff;
+}
+
+/* TIETOTURVA STYLES */
+
+.formTietoturva input {
+  margin: 20px;
+}
+
+.questionRadio {
+  vertical-align: middle;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.formTietoturva label {
+  vertical-align: middle;
+  font-size: 1.25rem;
+  margin: 10px;
+  display: inline-block;
+  width: 80%;
+}
+
+.formTietoturva ul {
+  list-style-type: none;
+}
+
+/* TIPPUVAT STYLES */
+
+.hidebuttonWords {
+  display: none;
+}
+
+.emptyGame {
+  margin: 0px;
+  color: #ffffff;
+}
+
+.gameContent {
+  text-align: center;
+  margin: 20px 30px 10px;
+}
+
+.gameFrame {
+  display: inline-block;
+  background: #ffffff;
+  height: 550px;
+  width: 1000px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #9fc9eb;
+}
+
+.lettersGame {
+  text-align: center;
+  border-style: none;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  position: absolute;
+  margin: auto;
+  width: 35px;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Oxygen";
+  display: inline-table;
+  background-color: #fd4f00;
+  color: #ffffff;
+}
+
+.lostGame {
+  color: #0000bf;
+}
+
+.pisteetGame {
+  color: #fd4f00;
+  border-color: #9fc9eb;
+  margin: 30px 50px;
+  padding: 30px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.uiDivGame {
+  display: flex;
+  justify-content: center;
+}
+
+.hideGame {
+  opacity: 0;
+  cursor: default;
+  width: 0px;
+}
+
+.uiGame {
+  display: inline-block;
+  margin: 20px 0;
+  width: 150px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fd4f00;
+  background-color: #ffffff;
+}
+
+.gameButtonsFrame {
+  font-size: 1.25rem;
+  display: block;
+  padding: 40px;
+  margin: 10px 0 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.wordInputWords {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0000bf;
+  border-radius: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  width: 600px;
+  margin: 10px;
+}
+
+.wordInputWords::placeholder {
+  color: lightgray;
+  /* font-size: 1.25em; */
+  opacity: 1;
+}
+
+.vinkkiGame {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #bd2719;
+  margin: auto;
+  margin-top: 10px;
+  width: 30%;
+  padding: 10px;
+  border-color: #bd2719;
+  border-width: 5px;
+  border-style: solid;
+}
+
+/* VEDAPUDOTA STYLES */
+
+.victoryClass {
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-top: -500px;
+  position: absolute;
+  background-image: url("./Tehtävät/Vedä&Pudota/Pictures/Explode.png");
+  background-size: cover;
+}
+
+.victoryClassFire {
+  height: 120px;
+  width: 120px;
+  margin-left: auto;
+  margin-top: -500px;
+  position: absolute;
+  background-image: url("./Tehtävät/Vedä&Pudota/Pictures/Firework.png");
+  background-size: cover;
+}
+
+.canvas {
+  height: 600px;
+  width: 600px;
+  margin-left: 100px;
+  margin-top: 50px;
+  background-image: url("./Tehtävät/Vedä&Pudota/Pictures/tree.png");
+  background-size: cover;
+}
+.basket1 {
+  height: 130px;
+  width: 200px;
+  transform: translate3d(400px, 470px, 0px);
+  position: absolute;
+  background-image: url("./Tehtävät/Vedä&Pudota/Pictures/basket.png");
+  background-size: cover;
+}
+
+.rabbit {
+  height: 130px;
+  width: 130px;
+  transform: translate3d(50px, 470px, 0px);
+  position: absolute;
+  background-image: url("./Tehtävät/Vedä&Pudota/Pictures/rabbit.png");
+  background-size: cover;
+}
+
+.dragObject {
+  height: 52px;
+  width: 45px;
+  border-radius: 25%;
+  position: absolute;
+  background-size: cover;
+  -webkit-filter: drop-shadow(2px 1px 0 white) drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+  filter: drop-shadow(2px 1px 0 white) drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+}
+
+.apple {
+  background-image: url("./Tehtävät/Vedä&Pudota/Pictures/apple.png");
+}
+
+.pear {
+  background-image: url("./Tehtävät/Vedä&Pudota/Pictures/Pear.png");
+}
+
+.carrot {
+  background-image: url("./Tehtävät/Vedä&Pudota/Pictures/carrot.png");
+}
+
+/* FORM STYLES */
+
+.correctMessage {
+  color: #009246;
+}
+
+.errorMessage {
+  color: #bd2719;
+}
+
+.mailForm label {
+  display: block;
+  text-align: left;
+  font-size: 1.25rem;
+  margin: 15px 0 0;
+}
+
+.fileInput {
+  font-size: 1.25rem;
+}
+
+/* CORE ELEMENTS */
+
+.mainPageFrame {
+  text-align: center;
+  margin: 20px 30px 10px;
+}
+
+.pageHeader {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  background-color: #9fc9eb;
+  color: #000000;
+  font-size: 1.6rem;
+}
+
+.pageContentFrame {
+  display: block;
+  padding: 40px;
+  margin: 10px 0;
+  text-align: left;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.containerGame {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.infoHeader {
+  color: #fd4f00;
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.exerciseHeader {
+  color: #0000bf;
+}
+
+/* BUTTONS */
+
+.actionButton {
+  background-color: #0000bf;
+  color: #ffffff;
+  padding: 10px 22px;
+  margin: 40px 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 25px;
+}
+
+.actionButton:hover {
+  background-color: #000000;
+}
+
+.nextPracButton {
+  background-color: #9fc9eb;
+  border-style: none;
+  color: #000000;
+  padding: 10px 22px;
+  margin: 20px 0;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.nextPracButton:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* TEXTAREA */
+
+.textWritingArea {
+  width: 95%;
+  resize: none;
+  border-color: #9fc9eb;
+  border-style: solid;
+  border-width: 3px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.smallTextarea {
+  min-height: 100px;
+}
+
+.mediumTextarea {
+  min-height: 150px;
+}
+
+.largeTextarea {
+  min-height: 350px;
+}
+
+footer {
+  padding: 20px 30px;
+  position: absolute;
+  z-index: 0;
+  margin-top: auto;
+  bottom: 0;
+  background-color: #000000;
+  color: #ffc61e;
+  width: 100%;
+  height: 2rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
