@@ -17,7 +17,7 @@ const App = () => {
       <div className="App">
         <nav>
           <div className="aalto-element" />
-          <h1>Digirastin tehtäväsivut</h1>
+          <h1>Digitaitojen oppimisalusta</h1>
           <ul>
             <li>
               <Link to="/">Etusivu</Link>

@@ -7,20 +7,22 @@
 }
 
 body {
+  max-width: 100%;
   min-height: 100%;
   background-color: #f1f1f1;
+  overflow-x: hidden;
 }
 
 .App {
   min-height: 100%;
   display: grid;
-  grid-template-columns: 25vw auto;
+  grid-template-columns: 20vw auto;
   grid-auto-rows: minmax(100vh, auto);
   background-color: #f1f1f1;
 }
 
 nav {
-  width: 25vw;
+  max-width: 20vw;
   min-height: 100%;
   background-color: #0000bf;
   color: #ffffff;
@@ -70,7 +72,7 @@ video {
   height: 100%;
   background-image: url("aalto.svg");
   position: fixed;
-  left: 23vw;
+  left: 18vw;
 }
 
 .content {
@@ -118,7 +120,7 @@ video {
 
 .gameContent {
   text-align: center;
-  margin: 20px 30px 10px;
+  margin: 20px 0 10px;
 }
 
 .gameFrame {
@@ -275,10 +277,8 @@ video {
   border-radius: 25%;
   position: absolute;
   background-size: cover;
-  -webkit-filter: drop-shadow(2px 1px 0 white) drop-shadow(-1px 1px 0 white)
-    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
-  filter: drop-shadow(2px 1px 0 white) drop-shadow(-1px 1px 0 white)
-    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+  -webkit-filter: drop-shadow(2px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+  filter: drop-shadow(2px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
 }
 
 .apple {

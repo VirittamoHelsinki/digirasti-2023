@@ -7,22 +7,164 @@ import { Link } from "react-router-dom";
 
 var letters = "";
 var lettersPienet = [
-  "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
-  "q","r","s","t","u","v","w","x","y","z","ä","ö",
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+  "ä",
+  "ö",
 ];
 
 var lettersMyosIsot = [
-  "a", "b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
-  "q","r","s","t","u","v","w","x","y","z","ä","ö","A","B","C","D",
-  "E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S",
-  "T","U","V","W","X","Y","Z","Ä","Ö",
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+  "ä",
+  "ö",
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+  "Ä",
+  "Ö",
 ];
 var lettersIsotJaErikois = [
-  "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
-  "p","q","r","s","t","u","v","w","x","y","z","ä","ö","A","B",
-  "C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q",
-  "R","S","T","U","V","W","X","Y","Z","Ä","Ö","/","*",
-  "&","-",".",",","€","$","+","?","=","(",")",
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+  "ä",
+  "ö",
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+  "Ä",
+  "Ö",
+  "/",
+  "*",
+  "&",
+  "-",
+  ".",
+  ",",
+  "€",
+  "$",
+  "+",
+  "?",
+  "=",
+  "(",
+  ")",
 ];
 
 var arrayOfLetters = [];
@@ -111,14 +253,14 @@ function FallingGame() {
       if ((points > 10 && lap === 0) || (points > 20 && lap === 1) || (points > 30 && lap === 2) || (points > 40 && lap === 3) || (points > 50 && lap === 4)) {
         animLenght = animLenght - 1;
         timeoutLenght = timeoutLenght - 1000;
-        lap++
+        lap++;
       }
 
       setTimeout(function () {
         cleanFallenLetter(lett);
       }, timeoutLenght);
     }
-    if (lives > 0 && points<50) {
+    if (lives > 0 && points < 50) {
       if (firefoxAgent) {
         location = randomIntFromInterval(0, 800);
       } else {
@@ -196,12 +338,10 @@ Gets also the position from the deleted letter. After timeout removes the new di
       /*Changes the border to reflect if the typed letter exist on the array, to green if it does.
       After short timeout changes it back to blue*/
       if (document.getElementById("gameFrame") != null) {
-        document.getElementById("gameFrame").style.borderColor =
-          "#009246";
+        document.getElementById("gameFrame").style.borderColor = "#009246";
         setTimeout(function () {
           if (document.getElementById("gameFrame") != null) {
-            document.getElementById("gameFrame").style.borderColor =
-              "#9FC9EB";
+            document.getElementById("gameFrame").style.borderColor = "#9FC9EB";
           }
         }, 200);
       }
@@ -211,10 +351,7 @@ Gets also the position from the deleted letter. After timeout removes the new di
        checks if capslock is on and sets the caplockpaalla var to true if it is*/
       if (
         (difficultySetting === 4500 || difficultySetting === 3500) &&
-        ((state.charCodeAt(0) >= 65 && state.charCodeAt(0) <= 90) ||
-          state.charCodeAt(0) === 197 ||
-          state.charCodeAt(0) === 196 ||
-          state.charCodeAt(0) === 214)
+        ((state.charCodeAt(0) >= 65 && state.charCodeAt(0) <= 90) || state.charCodeAt(0) === 197 || state.charCodeAt(0) === 196 || state.charCodeAt(0) === 214)
       ) {
         capslockpaalla = true;
       }
@@ -222,12 +359,10 @@ Gets also the position from the deleted letter. After timeout removes the new di
       /*Changes the border to reflect if the typed letter exist on the array, to red if it doesnt.
       After short timeout changes it back to blue*/
       if (document.getElementById("gameFrame") != null) {
-        document.getElementById("gameFrame").style.borderColor =
-          "#BD2719";
+        document.getElementById("gameFrame").style.borderColor = "#BD2719";
         setTimeout(function () {
           if (document.getElementById("gameFrame") != null) {
-            document.getElementById("gameFrame").style.borderColor =
-              "#9FC9EB";
+            document.getElementById("gameFrame").style.borderColor = "#9FC9EB";
           }
         }, 200);
       }
@@ -278,15 +413,14 @@ Gets also the position from the deleted letter. After timeout removes the new di
     }
   }
 
-   //Checks if lives are 0 or if points are 50 or over. Returns string depending the checks.
-  function winOrLose(){
-    if(points < 50){
-      return "Valitettavasti yrityksesi loppuivat, voit yrittää uudelleen, vaihtaa vaikeusastetta tai siirtyä seuraavaan tehtävään"
-    }else if(points >= 50){
-      return "Onneksi olkoon, sait vaaditut 50 pistettä, voit yrittää uudelleen toisella vaikeusasteella tai siirtyä seuraavaan tehtävään"
+  //Checks if lives are 0 or if points are 50 or over. Returns string depending the checks.
+  function winOrLose() {
+    if (points < 50) {
+      return "Valitettavasti yrityksesi loppuivat, voit yrittää uudelleen, vaihtaa vaikeusastetta tai siirtyä seuraavaan tehtävään";
+    } else if (points >= 50) {
+      return "Onneksi olkoon, sait vaaditut 50 pistettä, voit yrittää uudelleen toisella vaikeusasteella tai siirtyä seuraavaan tehtävään";
     }
   }
-
 
   /*If first render or coming to change difficulty, renders the start menu,
 otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
@@ -297,12 +431,8 @@ otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
           <div className="canvasGame">
             <h1 className="pageHeader">Tippuvat kirjaimet</h1>
             <div className="containerGame">
-              <div className="gameFrame" id="gameFrame" style={{borderColor:"#9FC9EB"}}>
-                <Clock
-                  letter={newLetter}
-                  arrayOfLetters={arrayOfLetters}
-                  difficulty={difficultySetting}
-                />
+              <div className="gameFrame" id="gameFrame" style={{ borderColor: "#9FC9EB" }}>
+                <Clock letter={newLetter} arrayOfLetters={arrayOfLetters} difficulty={difficultySetting} />
               </div>
               {cleanUpLetter()}
               {capslockvaroitus()}
@@ -310,16 +440,16 @@ otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
                 <p className="uiGame">Pisteet: {points}</p>
                 <p className="uiGame">Yritykset: {lives}</p>
                 <input
-              className="hideGame"
-              id="hideGame"
-              onKeyPress={(e) => handler(e)}
-              autoFocus={true}
-              onBlur={({ target }) =>
-                setTimeout(function () {
-                  target.focus({ preventScroll: true });
-                }, 2)
-              }
-            ></input>
+                  className="hideGame"
+                  id="hideGame"
+                  onKeyPress={(e) => handler(e)}
+                  autoFocus={true}
+                  onBlur={({ target }) =>
+                    setTimeout(function () {
+                      target.focus({ preventScroll: true });
+                    }, 2)
+                  }
+                ></input>
               </div>
             </div>
             {clearState()}
@@ -333,9 +463,7 @@ otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
             <h1 className="pageHeader">Tippuvat kirjaimet</h1>
             <div className="gameButtonsFrame">
               <div className="letterClass_lostGame">
-                <h3 className="lostGame">
-                  {winOrLose()}
-                </h3>
+                <h3 className="lostGame">{winOrLose()}</h3>
                 <h1 className="pisteetGame">Pisteesi: {points}</h1>
               </div>
               <button className="actionButton" onClick={tryAgain}>
@@ -360,43 +488,35 @@ otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
           <div className="pageContentFrame">
             <h2 className="infoHeader">Ohje:</h2>
             <p>
-            Paina näppäimistöstäsi niitä kirjaimia, jotka tippuvat alaspäin ruudulla.
-            Menetät yhden yrityksen painaessasi väärää kirjainta tai jos kirjain ehtii tippua loppuun asti.
-            Yritysten loppuessa peli päättyy.
-            <br/><br/> Huomaathan, että pelissä on sekä pieniä että isoja kirjaimia.
-            Yritä olla nopea, ettei kirjain ehdi tippua alas asti!
-            <br/><br/><strong> Onnea peliin!</strong>
+              Paina näppäimistöstäsi niitä kirjaimia, jotka tippuvat alaspäin ruudulla. Menetät yhden yrityksen painaessasi väärää kirjainta tai jos kirjain
+              ehtii tippua loppuun asti. Yritysten loppuessa peli päättyy.
+              <br />
+              <br /> Huomaathan, että pelissä on sekä pieniä että isoja kirjaimia. Yritä olla nopea, ettei kirjain ehdi tippua alas asti!
+              <br />
+              <br />
+              <strong> Onnea peliin!</strong>
             </p>
           </div>
           <div className="gameButtonsFrame">
             <b>Valitse vaikeusaste:</b>
             <br />
-            <button
-              className="actionButton"
-              onClick={() => startGame("helppo")}
-            >
+            <button className="actionButton" onClick={() => startGame("helppo")}>
               Helppo
             </button>
-            <button
-              className="actionButton"
-              onClick={() => startGame("normaali")}
-            >
+            <button className="actionButton" onClick={() => startGame("normaali")}>
               Normaali
             </button>
-            <button
-              className="actionButton"
-              onClick={() => startGame("vaikea")}
-            >
+            <button className="actionButton" onClick={() => startGame("vaikea")}>
               Vaikea
             </button>
-            <button
-              className="actionButton"
-              onClick={() => startGame("mahdoton")}
-            >
+            <button className="actionButton" onClick={() => startGame("mahdoton")}>
               Mahdoton
             </button>
           </div>
         </div>
+        <Link to="/tippuvat_sanat" className="nextPracButton" role="button">
+          Seuraava tehtävä
+        </Link>
       </div>
     );
   }

@@ -7,34 +7,300 @@ import { Link } from "react-router-dom";
 
 var words = "";
 var wordsEasy = [
-  "juosta","laukata", "hyppiä","iloita","olla","miettiä","ampua","juoda","keskustella","apu","koira","kissa","miksi","yksi",
-  "kalja", "puro","auto","poika","tyttö","isä","äiti","joki","joskus","kisa","pilkki","onki","ei","hai","he","hius","hän",
-  "häät","ien","ja","jae","jaosto","jo","jos","jää","koe","koi","kuin","kun","kuu","kyy","luo","luu","maa","me","mies","muu",
-  "myös","ne","niin","noin","nuo","nyt","näin","pian","pii","pois","puu","päin","pää","rae","ruis","saos","se","seis","seos",
-  "siis","suo","suu","syy","syys","säe","sää","taas","tae","tai","taos","te","tee","teos","tie","tuo","työ",
-  "täi","vaan","vai","vain","voi","vyö","yö",
+  "juosta",
+  "laukata",
+  "hyppiä",
+  "iloita",
+  "olla",
+  "miettiä",
+  "ampua",
+  "juoda",
+  "keskustella",
+  "apu",
+  "koira",
+  "kissa",
+  "miksi",
+  "yksi",
+  "kalja",
+  "puro",
+  "auto",
+  "poika",
+  "tyttö",
+  "isä",
+  "äiti",
+  "joki",
+  "joskus",
+  "kisa",
+  "pilkki",
+  "onki",
+  "ei",
+  "hai",
+  "he",
+  "hius",
+  "hän",
+  "häät",
+  "ien",
+  "ja",
+  "jae",
+  "jaosto",
+  "jo",
+  "jos",
+  "jää",
+  "koe",
+  "koi",
+  "kuin",
+  "kun",
+  "kuu",
+  "kyy",
+  "luo",
+  "luu",
+  "maa",
+  "me",
+  "mies",
+  "muu",
+  "myös",
+  "ne",
+  "niin",
+  "noin",
+  "nuo",
+  "nyt",
+  "näin",
+  "pian",
+  "pii",
+  "pois",
+  "puu",
+  "päin",
+  "pää",
+  "rae",
+  "ruis",
+  "saos",
+  "se",
+  "seis",
+  "seos",
+  "siis",
+  "suo",
+  "suu",
+  "syy",
+  "syys",
+  "säe",
+  "sää",
+  "taas",
+  "tae",
+  "tai",
+  "taos",
+  "te",
+  "tee",
+  "teos",
+  "tie",
+  "tuo",
+  "työ",
+  "täi",
+  "vaan",
+  "vai",
+  "vain",
+  "voi",
+  "vyö",
+  "yö",
 ];
 
 var wordsHard = [
-  "Aamutähti", "aamuvirkku","aamuvuoro","Aaltoviiva","aakkoset","absoluutti","adventti","Afrikka","aiheuttaja","aikuistua","aistikas",
-  "aivoriihi","Aivastaa","aivopähkinä","Aaltokuvio","alikersantti","alitajunta","alijäämä","alennus","allekirjoittaa","ALV","Laiskistua",
-  "anemia","anniskelu","appiukko","anoppi","BMW","Banaani","Bataatti","Bakteeri","bambu","baretti","barista","Betoni","biljardi","biojäte",
-  "Boakäärme","budjetti","buffetti","Celsius","Curry","Costa Rica","Datanomi","Delfiini","desibeli","Diktaattori","diplomaatti","dippikastike",
-  "dobermanni","DNA-testi","dopingtesti","duunari","edamjuusto","Edellytys","eettisyys","Eduskunta","demonstroida","design","devaaja",
-  "digitaalinen","dokumentoida","domino","dynamiitti","dramaattinen","elohopea","eliökunta","eläinperäinen","eläinrakas","emulaattori",
-  "epäreilu","Etelä-Korea","Etikkahappo","Fanaattinen","Flegmaattisuus","fyysinen","Galaksi","geeniterapia","gratinoida","haaskalintu",
-  "haastemies","Haarapääsky","hajaantuminen","heilahdus","Hedelmöittyä","Hektinen","helikopteri","hieskoivu","Hopeahäät","hopeakaivos",
-  "ihailtavasti","ihmeellisyys","Ikipäiviksi","ikkunalauta","imperialismi","Jakojäännös","Jengiläinen","jokainen","Jongleerata",
-  "Jälkiuuni","Jyrkänne","Kaalinkerä","Kaatopaikka","Kiharrin","Kirkollisvero","Kolikonheitto","Kullanmuru","Kvanttikemia","käpristellä",
-  "laillistaa","lakritsijuuri","Legioona","lennonjohto","lohkolämmitin","Lottovoitto","lumimyrsky","lähimaksu","lämmityslaite","Maakellari",
-  "Maakreivi","Magneetti","Moninainen","Menneisyys","Mökki","Märkätila","Näkymätön","Nälkäinen","Neilikka","näennäisesti","Nuolisade",
-  "Naiivi","Nälkälakko","Nautinto","Olematon","Oikeamielinen","Odotusaika","Olemassaolo","Oleskelulupa","Ompelukone","Opettaminen",
-  "Päällikkö","Painepesuri","Palautustölkki","Pallogrilli","Pelastusvene","Perkolaattori","Piispanhattu","Pikkutarkka","Poliisivoimat",
-  "Rikollisuus","Rakastua","Radiotaajuus","Raivokohtaus","Rettelöitsijä","rikkidioksidi","Romutuspalkkio","Rullalauta","Saapuminen",
-  "Sairaalassa","Seinäkello","Siirappinen","Sekajäte","Säälittävä","Sörnäinen","tahdittomuus","Tekohampaat","Terveystieto","Täsmätieto",
-  "Taistelu","Terminaattori","Tietyömaa","Uhmakkuus","Uimarengas","Ulkoilma","Urakoitsija","Uuttera","Vaakataso","Vaalikausi","Velkavankeus",
-  "verikoe","Verovirkailija","Viittomakieli","Vuokravakuus","Väestönkasvu","Yritys","Yksilöllisyys","Yleisurheilija","yöperhonen","Zoomi",
-  "Äkkipikainen","Äimänkäkenä","Ärsyyntyä","Äyskäröinti","Ääntenlasku","Öljyntuotanto","Öykkäröidä","Öljyvoimala","Öyhöttäjä"
+  "Aamutähti",
+  "aamuvirkku",
+  "aamuvuoro",
+  "Aaltoviiva",
+  "aakkoset",
+  "absoluutti",
+  "adventti",
+  "Afrikka",
+  "aiheuttaja",
+  "aikuistua",
+  "aistikas",
+  "aivoriihi",
+  "Aivastaa",
+  "aivopähkinä",
+  "Aaltokuvio",
+  "alikersantti",
+  "alitajunta",
+  "alijäämä",
+  "alennus",
+  "allekirjoittaa",
+  "ALV",
+  "Laiskistua",
+  "anemia",
+  "anniskelu",
+  "appiukko",
+  "anoppi",
+  "BMW",
+  "Banaani",
+  "Bataatti",
+  "Bakteeri",
+  "bambu",
+  "baretti",
+  "barista",
+  "Betoni",
+  "biljardi",
+  "biojäte",
+  "Boakäärme",
+  "budjetti",
+  "buffetti",
+  "Celsius",
+  "Curry",
+  "Costa Rica",
+  "Datanomi",
+  "Delfiini",
+  "desibeli",
+  "Diktaattori",
+  "diplomaatti",
+  "dippikastike",
+  "dobermanni",
+  "DNA-testi",
+  "dopingtesti",
+  "duunari",
+  "edamjuusto",
+  "Edellytys",
+  "eettisyys",
+  "Eduskunta",
+  "demonstroida",
+  "design",
+  "devaaja",
+  "digitaalinen",
+  "dokumentoida",
+  "domino",
+  "dynamiitti",
+  "dramaattinen",
+  "elohopea",
+  "eliökunta",
+  "eläinperäinen",
+  "eläinrakas",
+  "emulaattori",
+  "epäreilu",
+  "Etelä-Korea",
+  "Etikkahappo",
+  "Fanaattinen",
+  "Flegmaattisuus",
+  "fyysinen",
+  "Galaksi",
+  "geeniterapia",
+  "gratinoida",
+  "haaskalintu",
+  "haastemies",
+  "Haarapääsky",
+  "hajaantuminen",
+  "heilahdus",
+  "Hedelmöittyä",
+  "Hektinen",
+  "helikopteri",
+  "hieskoivu",
+  "Hopeahäät",
+  "hopeakaivos",
+  "ihailtavasti",
+  "ihmeellisyys",
+  "Ikipäiviksi",
+  "ikkunalauta",
+  "imperialismi",
+  "Jakojäännös",
+  "Jengiläinen",
+  "jokainen",
+  "Jongleerata",
+  "Jälkiuuni",
+  "Jyrkänne",
+  "Kaalinkerä",
+  "Kaatopaikka",
+  "Kiharrin",
+  "Kirkollisvero",
+  "Kolikonheitto",
+  "Kullanmuru",
+  "Kvanttikemia",
+  "käpristellä",
+  "laillistaa",
+  "lakritsijuuri",
+  "Legioona",
+  "lennonjohto",
+  "lohkolämmitin",
+  "Lottovoitto",
+  "lumimyrsky",
+  "lähimaksu",
+  "lämmityslaite",
+  "Maakellari",
+  "Maakreivi",
+  "Magneetti",
+  "Moninainen",
+  "Menneisyys",
+  "Mökki",
+  "Märkätila",
+  "Näkymätön",
+  "Nälkäinen",
+  "Neilikka",
+  "näennäisesti",
+  "Nuolisade",
+  "Naiivi",
+  "Nälkälakko",
+  "Nautinto",
+  "Olematon",
+  "Oikeamielinen",
+  "Odotusaika",
+  "Olemassaolo",
+  "Oleskelulupa",
+  "Ompelukone",
+  "Opettaminen",
+  "Päällikkö",
+  "Painepesuri",
+  "Palautustölkki",
+  "Pallogrilli",
+  "Pelastusvene",
+  "Perkolaattori",
+  "Piispanhattu",
+  "Pikkutarkka",
+  "Poliisivoimat",
+  "Rikollisuus",
+  "Rakastua",
+  "Radiotaajuus",
+  "Raivokohtaus",
+  "Rettelöitsijä",
+  "rikkidioksidi",
+  "Romutuspalkkio",
+  "Rullalauta",
+  "Saapuminen",
+  "Sairaalassa",
+  "Seinäkello",
+  "Siirappinen",
+  "Sekajäte",
+  "Säälittävä",
+  "Sörnäinen",
+  "tahdittomuus",
+  "Tekohampaat",
+  "Terveystieto",
+  "Täsmätieto",
+  "Taistelu",
+  "Terminaattori",
+  "Tietyömaa",
+  "Uhmakkuus",
+  "Uimarengas",
+  "Ulkoilma",
+  "Urakoitsija",
+  "Uuttera",
+  "Vaakataso",
+  "Vaalikausi",
+  "Velkavankeus",
+  "verikoe",
+  "Verovirkailija",
+  "Viittomakieli",
+  "Vuokravakuus",
+  "Väestönkasvu",
+  "Yritys",
+  "Yksilöllisyys",
+  "Yleisurheilija",
+  "yöperhonen",
+  "Zoomi",
+  "Äkkipikainen",
+  "Äimänkäkenä",
+  "Ärsyyntyä",
+  "Äyskäröinti",
+  "Ääntenlasku",
+  "Öljyntuotanto",
+  "Öykkäröidä",
+  "Öljyvoimala",
+  "Öyhöttäjä",
 ];
 
 var arrayOfWords = [];
@@ -124,10 +390,16 @@ function FallingWords() {
       ready = false;
 
       //Every 40 points, shortens the falling time by 1 sec
-      if ((points > 30 && lap === 0) || (points > 60 && lap === 1) || (points > 90 && lap === 2) || (points > 120 && lap === 3) || (points > 150 && lap === 4)) {
+      if (
+        (points > 30 && lap === 0) ||
+        (points > 60 && lap === 1) ||
+        (points > 90 && lap === 2) ||
+        (points > 120 && lap === 3) ||
+        (points > 150 && lap === 4)
+      ) {
         animLenght = animLenght - 1;
         timeoutLenght = timeoutLenght - 1000;
-        lap++
+        lap++;
       }
       setTimeout(function () {
         cleanFallenLetter(lett);
@@ -135,16 +407,16 @@ function FallingWords() {
     }
     if (lives > 0) {
       if (firefoxAgent) {
-        if(difficultySetting <= 4500){
+        if (difficultySetting <= 4500) {
           location = randomIntFromInterval(20, 750);
-        }else{
-        location = randomIntFromInterval(20, 800);
+        } else {
+          location = randomIntFromInterval(20, 800);
         }
       } else {
-        if(difficultySetting <= 4500){
+        if (difficultySetting <= 4500) {
           location = randomIntFromInterval(-380, 260);
-        }else{
-        location = randomIntFromInterval(-380, 370);
+        } else {
+          location = randomIntFromInterval(-380, 370);
         }
       }
       return (
@@ -256,23 +528,19 @@ function FallingWords() {
   function changeBorder(trueOrfalse) {
     if (trueOrfalse === true) {
       if (document.getElementById("gameFrame") != null) {
-        document.getElementById("gameFrame").style.borderColor =
-          "#009246";
+        document.getElementById("gameFrame").style.borderColor = "#009246";
         setTimeout(function () {
           if (document.getElementById("gameFrame") != null) {
-            document.getElementById("gameFrame").style.borderColor =
-              "#9FC9EB";
+            document.getElementById("gameFrame").style.borderColor = "#9FC9EB";
           }
         }, 200);
       }
     } else {
       if (document.getElementById("gameFrame") != null) {
-        document.getElementById("gameFrame").style.borderColor =
-          "#BD2719";
+        document.getElementById("gameFrame").style.borderColor = "#BD2719";
         setTimeout(function () {
           if (document.getElementById("gameFrame") != null) {
-            document.getElementById("gameFrame").style.borderColor =
-              "#9FC9EB";
+            document.getElementById("gameFrame").style.borderColor = "#9FC9EB";
           }
         }, 200);
       }
@@ -304,14 +572,13 @@ function FallingWords() {
   }
 
   //Checks if lives are 0 or if points are 150 or over. Returns string depending the checks.
-  function winnerOrLoserCheck(){
-    if(points < 150){
-      return "Valitettavasti yrityksesi loppuivat, voit yrittää uudelleen, vaihtaa vaikeusastetta tai siirtyä seuraavaan tehtävään"
-    }else if(points>=150){
-      return "Onneksi olkoon, sait vaaditut 150 pistettä, voit yrittää uudelleen toisella vaikeusasteella tai siirtyä seuraavaan tehtävään"
+  function winnerOrLoserCheck() {
+    if (points < 150) {
+      return "Valitettavasti yrityksesi loppuivat, voit yrittää uudelleen, vaihtaa vaikeusastetta tai siirtyä seuraavaan tehtävään";
+    } else if (points >= 150) {
+      return "Onneksi olkoon, sait vaaditut 150 pistettä, voit yrittää uudelleen toisella vaikeusasteella tai siirtyä seuraavaan tehtävään";
     }
   }
-
 
   /*If first render or coming to change difficulty, renders the start menu,
 otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
@@ -320,14 +587,10 @@ otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
       return (
         <div className="gameContent">
           <div className="canvasWords">
-          <h1 className="pageHeader">Tippuvat sanat</h1>
+            <h1 className="pageHeader">Tippuvat sanat</h1>
             <div className="containerGame">
-              <div className="gameFrame" id="gameFrame" style={{borderColor:"#9FC9EB"}}>
-                <Timer
-                  word={newWord}
-                  arrayOfWords={arrayOfWords}
-                  difficulty={difficultySetting}
-                />
+              <div className="gameFrame" id="gameFrame" style={{ borderColor: "#9FC9EB" }}>
+                <Timer word={newWord} arrayOfWords={arrayOfWords} difficulty={difficultySetting} />
               </div>
               {capslockvaroitus()}
               <div className="uiDivGame">
@@ -360,9 +623,7 @@ otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
             <h1 className="pageHeader">Tippuvat sanat</h1>
             <div className="gameButtonsFrame">
               <div className="letterClass_lostWords">
-                <h3 className="lostGame">
-                  {winnerOrLoserCheck()}
-                </h3>
+                <h3 className="lostGame">{winnerOrLoserCheck()}</h3>
                 <h2 className="pisteetGame">Pisteesi: {points}</h2>
               </div>
               <div className="GameOverButtonsDivWords">
@@ -389,42 +650,35 @@ otherwise renders game mechanics. If lives hit 0, renders game over menu.*/
           <div className="pageContentFrame">
             <h2 className="infoHeader">Ohje:</h2>
             <p>
-            Kirjoita näppäimistölläsi sama sana, joka tippuu alaspäin ruudulla.
-            Kirjoita sana sille varattuun kenttään ja paina näppäimistöstäsi <strong>ENTER</strong> painiketta.
-            <br/><br/>Ole tarkkana: Menetät yhden yrityksen kirjoittaessasi sanan väärin tai jos sana ehtii tippua loppuun asti.
-            Yritysten loppuessa peli päättyy. 
-            <br/><br/> <strong> Onnea peliin!</strong>
+              Kirjoita näppäimistölläsi sama sana, joka tippuu alaspäin ruudulla. Kirjoita sana sille varattuun kenttään ja paina näppäimistöstäsi{" "}
+              <strong>ENTER</strong> painiketta.
+              <br />
+              <br />
+              Ole tarkkana: Menetät yhden yrityksen kirjoittaessasi sanan väärin tai jos sana ehtii tippua loppuun asti. Yritysten loppuessa peli päättyy.
+              <br />
+              <br /> <strong> Onnea peliin!</strong>
             </p>
           </div>
           <div className="gameButtonsFrame">
             <b>Valitse vaikeusaste:</b>
             <br />
-            <button
-              className="actionButton"
-              onClick={() => startGame("helppo")}
-            >
+            <button className="actionButton" onClick={() => startGame("helppo")}>
               Helppo
             </button>
-            <button
-              className="actionButton"
-              onClick={() => startGame("normaali")}
-            >
+            <button className="actionButton" onClick={() => startGame("normaali")}>
               Normaali
             </button>
-            <button
-              className="actionButton"
-              onClick={() => startGame("vaikea")}
-            >
+            <button className="actionButton" onClick={() => startGame("vaikea")}>
               Vaikea
             </button>
-            <button
-              className="actionButton"
-              onClick={() => startGame("mahdoton")}
-            >
+            <button className="actionButton" onClick={() => startGame("mahdoton")}>
               Mahdoton
             </button>
           </div>
         </div>
+        <Link to="/veda_ja_pudota" className="nextPracButton" role="button">
+          Seuraava tehtävä
+        </Link>
       </div>
     );
   }

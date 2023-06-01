@@ -1,0 +1,14 @@
+App.css
+
+.body max-width: 100%; overflow-x: hidden;
+.App grid-template-columns: 25vw auto -> grid-template-columns: 20vw auto; 
+.nav width: 25vw -> max-width: 20vw;
+.aalto-element left: 23vw -> left: 18vw;
+.gameContent margin: 20px 30px 10px -> margin: 20px 0 10px;
+
+Lisätty sivuille:
+<Link to="/<seuraavan tehtävän osoite>" className="nextPracButton" role="button">
+    Seuraava tehtävä
+</Link>
+
+Mikko Manninen 31.5.2023
