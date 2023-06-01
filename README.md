@@ -1,10 +1,10 @@
-# Digirasti
+# Digitaitojen oppimisalusta
 
 (Suomenkielinen dokumentaatio löytyy alempaa)
 
 This project was created using [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html)
 
-Digirasti is a collection of differen exercises made for Helsingin Työllisyyspalvelut, that are meant for people with little knowledge of using a computer, keyboard and mouse.
+"Digitaitojen oppimisalusta" is a collection of differen exercises made for Helsingin Työllisyyspalvelut, that are meant for people with little knowledge of using a computer, keyboard and mouse.
 
 This collection contains exercises that contain text editing, typing, filling a form, using mouse and a quiz on basic information security.
 
@@ -28,7 +28,7 @@ The CSS has been condensed to a single file, so every style you need will be the
 
 Projekti on luotu käyttäen [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html):ia
 
-Digirasti on tehtäväkokonaisuus Helsingin työllisyyspalveluille joka on suunnattu henkilöille joilla ei ole paljoa aiempaa kokemusta tietokoneen, näppäimistön tai hiiren käytöstä.
+Digitaitojen oppimisalusta on tehtäväkokonaisuus Helsingin työllisyyspalveluille, joka on suunnattu henkilöille, joilla ei ole paljoa aiempaa kokemusta tietokoneen, näppäimistön tai hiiren käytöstä.
 
 Kokonaisuus sisältää tekstin muokkausta, kirjoittamista, sähköisen lomakkeen täyttämistä, hiiren käyttöä ja tietoturvaan liittyvän kyselyn.
 

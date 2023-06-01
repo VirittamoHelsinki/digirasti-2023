@@ -23,7 +23,10 @@ const Home = () => {
           <p>Tsemppiä harjoitteluun!</p>
           <br />
           <br />
-          <p>Sivut on tehty Helsingin työllisyyspalveluiden Digirasti-palvelun ja Helsingin kaupungin työllistämispalvelu Virittämön yhteistyönä.</p>
+          <p>
+            Sivut on tehty Helsingin työllisyyspalveluiden Digitaitojen oppimisalusta -palvelun ja Helsingin kaupungin työllistämispalvelu Virittämön
+            yhteistyönä.
+          </p>
         </div>
         <Link to="/Tehtava2" className="nextPracButton" role="button">
           Aloita
